@@ -1,0 +1,66 @@
+<!doctype html>
+<head>
+  <meta name='viewport' content='width=device-width,height=device-height,initial-scale=1'>
+  <meta name='author' content='Lee Cohn'>
+
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/mystyle.css') }}" />
+  <link href='http://fonts.googleapis.com/css?family=Futura:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+
+<body>
+<body>
+  <div class='header'>
+    <div> 
+      <span>Lee Cohn</span> 
+      <span>|</span> 
+      <span><a href='http://lncohn.com/'>lncohn.com</a></span> 
+      <span>|</span> 
+      <span><a href='https://github.com/lncohn'> github.com/lncohn </a></span> 
+      <span>|</span> 
+      <span><a href='https://www.linkedin.com/in/lee-cohn-59806180'> LinkedIn </a></span>
+    </div>
+  </div>
+
+  <div class="flex">
+    <div class="site-wrapper flex-content">
+      <div class="site-wrapper-inner">
+        <br>
+        <div class="cover-container">
+          <h1 class="cover-heading">Results</h1>
+          <h3>Deep Learning Model's prediction for submitted image.</h3> 
+          {% if image_url %}
+          <img height="300px" src={{image_url}}>
+          {% else %}
+          <h1>No image found</h1>
+          {% endif %}
+          <div class="inner cover">
+          {% if pug_score %}
+          <h3>Pug score is : {{ pug_score }}</h3>
+          {% else %}
+          <h3>Error pug_score</h3>
+          {% endif %}
+
+          {% if chi_score %}
+          <h3>Chihuahua score is : {{ chi_score }}</h3>
+          {% else %}
+          <h3>Error chi_score</h3>
+          {% endif %}
+          <br>
+          <button class="btn btn-primary btn-lg" onclick="goBack()">Go Back</button>
+          <script>
+          function goBack() {
+            window.history.back();
+          }
+          </script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>

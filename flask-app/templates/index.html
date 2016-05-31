@@ -1,0 +1,51 @@
+<!doctype html>
+<head>
+  <meta name='viewport' content='width=device-width,height=device-height,initial-scale=1'>
+  <meta name='author' content='Lee Cohn'>
+
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/mystyle.css') }}" />
+  <link href='http://fonts.googleapis.com/css?family==News+Cycle:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div class='header'>
+    <div> 
+      <span>Lee Cohn</span> 
+      <span>|</span> 
+      <span><a href='http://lncohn.com/'>lncohn.com</a></span> 
+      <span>|</span> 
+      <span><a href='https://github.com/lncohn'> github.com/lncohn </a></span> 
+      <span>|</span> 
+      <span><a href='https://www.linkedin.com/in/lee-cohn-59806180'> LinkedIn </a></span>
+    </div>
+  </div>
+
+  <div class="flex">
+    <div class="site-wrapper flex-content">
+      <div class="site-wrapper-inner">
+        <div class="cover-container">
+          <h1 class="cover-heading">Pug or Chihuahua? </h1>
+          <h3>Classifying dog images using deep learning.</h3> 
+          <img height="300px" src="{{ url_for('static', filename='yaffa_flat.jpg') }}">
+          <div class="inner cover">
+          <form action="." method="POST">
+            <div class="form-group">
+            <h3>Enter the url of a pug or chihuahua image:</h3>
+            <input type="text" name = "text" class="form-control input-lg" id="inputlg" type="text" size = "75" value="https://upload.wikimedia.org/wikipedia/commons/d/d7/Sad-pug.jpg">
+            </div>
+          <input type="submit" class="btn btn-primary btn-lg" value="Submit Button">
+          </form>
+          <br> 
+          <h4>
+            * The photo above is of Yaffa, my pug/chihuahua mix and inspiration for this classifier. 
+          </h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
