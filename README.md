@@ -12,5 +12,6 @@ Make sure you have the following packages installed: scipy, numpy, scikit-image,
 Download the vgg16 weights, "vgg16.h5", available at the following github page https://gist.github.com/baraldilorenzo/07d7802847aaad0a35d3. Now run pugs_vs_chihuahuas.ipynb to build the model and evaluate_pugs_vs_chihuahuas.ipynb to evaluate the model. Important! This model takes quite a long to build. 
 
 #Run the Flask App
-Copy the weights produced from building the model to the flask app folder and run python pug_v_chi_app.py
-Open your browser to the appropriate local ip address to view and use the flask app.  
+Copy the weights produced from building the model to the Flask-App folder and run python pug_v_chi_app.py in the terminal.
+Open your browser to the appropriate local ip address to view and use the flask app.  Try running the app on examples of pug/chihuahua 
+mixes as well.
